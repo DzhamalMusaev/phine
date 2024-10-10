@@ -1,0 +1,60 @@
+/* Основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+#smiley {
+    font-size: 100px;
+    transition: all 0.5s ease;
+    user-select: none;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Состояния смайлика */
+.smile.happy {
+    color: #FFD700;
+    transform: scale(1.1);
+}
+
+.smile.sad {
+    color: #87CEFA;
+    transform: scale(1);
+}
+
+.smile.angry {
+    color: #FF4500;
+    transform: scale(0.9) rotate(15deg);
+}
+
+/* Анимации для красоты */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+@keyframes tilt {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(10deg); }
+}
